@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/MHRAHMAN1996/class-work-5/issues"
   },
-  "homepage": "https://github.com/MHRAHMAN1996/class-work-5#readme"
+  "homepage": "https://github.com/MHRAHMAN1996/class-work-5#readme",
+  "dependencies": {
+    "app": "^0.1.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "http": "0.0.0"
+  }
 }

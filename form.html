@@ -1,22 +1,29 @@
 <html>
+  <hade>
+    <title>User Form</title>
+    </hade>
 <body>
-
-<form action="/action_page.php">First name:<br>
-<input type="text" name="firstname">
-<br>Last name:<br>
-<input type="text" name="lastname">
-<br><br>
-<input type="submit">
-</form>
-
-
-<br><br><br><br><br><br>
-
-
-<form action="/action_page.php">E-mail:
-  <input type="email" name="email"><br><br>
-  <input type="submit">
-</form>
+  <h1>User Details</h1>
+  <input type="text" id="name"/>
+  <input type="email" id="email"/>
+  <button id="submit">submit</button>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.is" src=""></script>
+  <script>
+ var user = {name:"", email:""};
+ $('#submit').click(function(){
+ user.name = $("#name").val();
+ user.email = $("#email").val();
+ $.ajax({
+ method:"POST",
+ url: "/submit_user",
+ data: user
+ }).done(function(response){
+ console.log(response);
+ }).fall(function(response){
+ console.log(response);
+ });
+ });
+ </script>
 
 </body>
 </html>
