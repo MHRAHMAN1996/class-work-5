@@ -1,5 +1,4 @@
 var http = require('http');
-//var mongoose = require ('mongoose');
 var mongo=require('mongodb');
   var express = require('express');
   var app = express();
@@ -13,7 +12,6 @@ var db, uri = "mongodb://" + process.env.IP + "/test";
     }
     else {
       db = client.db('simple-node');
-   
     }
   });
    
@@ -21,7 +19,6 @@ var db, uri = "mongodb://" + process.env.IP + "/test";
     db.createCollection('users',function(err,collection){ if (err) throw err;});
     var collection = db.collection('users');
     collection.save(form_data);
-    
   }
   
  var server = http.Server(app);
@@ -52,7 +49,6 @@ app.post('/submit_user',function(req, res){
   res.status('200');
 });
 
- 
   server.listen(process.env.PORT, process.env.IP, function(){
     console.log('Server running');
 });
